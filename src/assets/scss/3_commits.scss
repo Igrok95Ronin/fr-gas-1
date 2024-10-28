@@ -1,0 +1,54 @@
+.commits {
+    margin-top: 50px;
+}
+.commits__box {
+
+}
+.commits__title {
+    @include h2Title;
+}
+.commits__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.commits__commit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.commits__top {
+    display: flex;
+    gap: 20px;
+}
+.commits__imgWrp {
+    max-width: 300px;
+    max-height: 300px;
+}
+.commits__img {
+    width: 100%;
+    height: 100%;
+}
+.commits__content {
+}
+.commits__name {
+    font-weight: 700;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        background-image: url("../img/check.png");
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        // right: -10px;
+        transform: translateY(-50%);
+    }
+}
+.commits__imgStar {
+    width: 100px;
+}
+.commits__message {
+    line-height: 20px;
+}
