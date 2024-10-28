@@ -44,13 +44,17 @@ body{
 :root{
     --maxWidth: 1200px;
     --btnColorFixed: #000;
-    --mainColor: #000
+    --mainColor: #cc332e
 }
 
 @mixin h1Title{
     font-weight: 700;
-    font-size: clamp(32px, 5vw, 40px);
+    font-size: clamp(27px, 5vw, 40px);
     margin: 0;
+    text-align: center;
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 15px 10px;
 }
 @mixin h2Title {
     font-size: clamp(28px, 5vw, 32px);
@@ -64,25 +68,25 @@ body{
     letter-spacing: 1px;
     font-size: 20px;
     padding: 10px 30px 10px 50px;
-    border-radius: 10px;
+    border-radius: 0px;
     transition: .3s;
     span{
     position: relative;
         &::before{
             content: '';
             position: absolute;
-            background-image: url('../icons/telephone-fill.svg');
+            background-image: url('../img/tell.png');
             background-size: cover;
             background-repeat: no-repeat;
-            width: 20px;
+            width: 50px;
             aspect-ratio: 1;
-            left: -45px;
+            left: -65px;
             top: 50%;
             transform: translateY(-50%);
         }
     }
     &:hover{
-        background-color: #0f426e;
+        background-color: #ac2824;
         color: #fff;
     }
 }

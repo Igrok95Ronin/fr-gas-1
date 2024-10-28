@@ -1,0 +1,44 @@
+.header {
+}
+.header__box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.header__left {
+}
+.header__title {
+    @include h1Title
+}
+.header__imgWrapper {
+    max-width: 100%;
+    max-height: 100%;
+}
+.header__img {
+    width: 100%;
+    height: 100%;
+}
+.header__right {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+}
+.header__txt {
+    line-height: 20px;
+}
+.header__wrapperMiniImg {
+    display: flex;
+    justify-content: space-evenly;
+}
+.header__imgMini {
+    width: 100px;
+    height: 100px;
+}
+.header__tellWrapper {
+    text-align: center;
+}
+.header__tell {
+    @include btn
+}
