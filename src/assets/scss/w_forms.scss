@@ -1,0 +1,48 @@
+.forms {
+    margin: 50px 0;
+}
+.forms__wrapper {
+}
+.container-fluid {
+}
+.row {
+}
+.col-12 {
+}
+.container {
+}
+.forms__box {
+}
+.forms__title {
+    @include h2Title;
+    width: 100%;
+}
+.mb-0 {
+}
+.mt-3 {
+}
+.my-0 {
+}
+.form-control {
+}
+.my-4 {
+}
+.btn {
+}
+.text-uppercase {
+}
+.fw-bold {
+}
+.px-3 {
+}
+.py-2 {
+}
+.forms__button {
+    background-color: var(--mainColor);
+    color: #fff;
+    transition: .3s;
+    &:hover{
+        color: #fff;
+        background-color: #8f1c18;
+    }
+}
