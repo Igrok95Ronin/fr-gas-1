@@ -1,3 +1,16 @@
+@media(max-width: 1100px){
+    .boilerRepair__wrapperBtn {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+@media(max-width: 767px){
+    .header__box,
+    .boilerRepair__box,
+    .commits__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
 @media(max-width: 500px) {
     .btnFixedD {
         display: none;
@@ -7,5 +20,8 @@
     }
     footer {
         margin-bottom: 60px;
+    }
+    .commits__img{
+        max-width: 200px;
     }
 }
